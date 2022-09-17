@@ -1,0 +1,75 @@
+site_name: Dore
+theme:
+  name: material
+  palette:
+
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - content.code.annotate
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - content.tabs.link
+
+nav:
+  - Home:
+    - Getting started:
+        - Installation: 'index.md'
+        - Example:
+          - E-commerce example: 'example.md'
+          - Create your manifest: 'example_create_your_manifest.md'
+          - Invoke Dore: 'example_invoke_dore.md'
+          - E-commerce manifest explained: 'example_manifest_explained.md'
+    - Tutorial: 'tutorial.md'
+
+  - Documentation:
+      - Manifest:
+          - Manifest: 'manifest/manifest.md'
+          - Datastores:
+            - Datastores: 'manifest/datastores/datastores.md'
+          - Models:
+            - Models: 'manifest/models/models.md'
+            - Model Persistence: 'manifest/models/model_persistence.md'
+          - Attributes:
+            - Attributes: 'manifest/attributes/attributes.md'
+            - Value Generators:
+                - Attribute Value Generators: 'manifest/attributes/value_generators.md'
+                - Faker: 'manifest/attributes/value_generator_faker.md'
+                - Selector: 'manifest/attributes/value_generator_selector.md'
+                - Ref: 'manifest/attributes/value_generator_ref.md'
+                - Composite: 'manifest/attributes/value_generator_composite.md'
+            - Properties:
+                - Attribute Properties: 'manifest/attributes/attribute_properties.md'
+                - MySQL: 'manifest/attributes/attribute_properties_mysql.md'
+                - Postgres: 'manifest/attributes/attribute_properties_postgres.md'
+                - MongoDB: 'manifest/attributes/attribute_properties_mongodb.md'
+                - Elasticsearch: 'manifest/attributes/attribute_properties_elasticsearch.md'
+  - About: 'about.md'
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - md_in_html
