@@ -11,6 +11,7 @@ repo_url: https://github.com/dore-datagen/dore-py
 copyright: Copyright &copy; 2022 Bhargav KN
 
 theme:
+  logo: assets/dore-logo.svg
   name: material
   palette:
 
