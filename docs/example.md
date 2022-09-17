@@ -1,6 +1,6 @@
 # Example
 
-The example below is illustrative of a typical workflow for using Dore.
+This example is illustrative of a typical workflow for using Dore.
 
 Let's say we want to generate fake data in MySQL for the following E-Commerce schema:
 

@@ -2,7 +2,7 @@
 
 Manifests have the following structure:
 
-```json
+```json title="General structure of a Dore manifest" linenums="1"
 {
   "id": "manifest ID",
   "datastores": {
@@ -23,9 +23,9 @@ Manifests have the following structure:
 Take a moment to look at the fields mentioned in the manifest above.
 You would notice three main things:
 
-* `datastores`
-* `models`
-  * `attributes`
+* `datastores` (line 3)
+* `models` (line 6)
+  * `attributes` (line 8)
 
 Although Dore supports generating and persisting data for multiple protocols, we shall keep our vocabulary specific to
 MySQL for the purposes of this example. 

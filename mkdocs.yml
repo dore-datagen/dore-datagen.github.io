@@ -1,4 +1,15 @@
 site_name: Dore
+site_url: https://dore-datagen.github.io/
+site_author: Bhargav KN
+site_description: >-
+  Schema based fake data generator.
+
+repo_name: dore-datagen/dore-py
+repo_url: https://github.com/dore-datagen/dore-py
+
+# Copyright
+copyright: Copyright &copy; 2022 Bhargav KN
+
 theme:
   name: material
   palette:

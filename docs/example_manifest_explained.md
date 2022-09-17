@@ -1,7 +1,7 @@
 # The E-commerce manifest
 
 The E-Commerce manifest is shown here again for reference. Please scroll past the code snippet below
-to view details of fields in the manifest. 
+to view details of fields about the manifest. 
 
 ```json title="ecommerce-dore-manifest.json" linenums="1"
 {

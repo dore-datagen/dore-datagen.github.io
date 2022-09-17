@@ -1,16 +1,35 @@
+```text
+
+8 888888888o.           ,o888888o.      8 888888888o.    8 888888888888
+8 8888    `^888.     . 8888     `88.    8 8888    `88.   8 8888
+8 8888        `88.  ,8 8888       `8b   8 8888     `88   8 8888
+8 8888         `88  88 8888        `8b  8 8888     ,88   8 8888
+8 8888          88  88 8888         88  8 8888.   ,88'   8 888888888888
+8 8888          88  88 8888         88  8 888888888P'    8 8888
+8 8888         ,88  88 8888        ,8P  8 8888`8b        8 8888
+8 8888        ,88'  `8 8888       ,8P   8 8888 `8b.      8 8888
+8 8888    ,o88P'     ` 8888     ,88'    8 8888   `8b.    8 8888
+8 888888888P'           `8888888P'      8 8888     `88.  8 888888888888
+
+
+                   SCHEMA BASED FAKE DATA GENERATOR
+```
+
+
 # Welcome to Dore's documentation!
 
 ## Getting Started
 
-*Dore* is a Python based CLI tool that generates fake data for you based on a config (known as the manifest). 
+*Dore* is a tool that generates fake data for you based on a config (known as the **manifest**). 
 It can generate data for schemas with complex dependencies such as hierarchical schemas, schemas with PK/FK relations, 
 nested values, and so on.
 
-Dore leverages other fake data generation libraries (ex: Faker) which provide the ability to 
-generate fake data for various data types and generate fake data for complex schemas with dependencies amongst them. 
-While Faker allows you to do something like *generate a random UUID4 string*, with Dore, you could 
-something along the lines of *Generate a random UUID4 string as PK for a table and use these values as a FK in another 
+Dore leverages other fake data generation libraries (ex: Faker) and generates fake data for complex schemas with 
+dependencies amongst them. While Faker allows you to do something like *generate a random UUID4 string*, with Dore, 
+you could do something along the lines of *Generate a random UUID4 string as PK for a table and use these values as a FK in another 
 table*.
+
+You can use Dore for local development as well as in CI/CD pipelines.
 
 ## Installation
 
@@ -31,4 +50,5 @@ foo@bar:(dore-venv)$ pip install dore
 
 ## Next Steps
 
-Follow our [E-Commerce example](./example.md) to get started with Dore!
+Once the installation is complete, and if this is the first time you're trying out Dore, we recommend you check out our
+[E-Commerce example](./example.md) to get hands on with Dore.
