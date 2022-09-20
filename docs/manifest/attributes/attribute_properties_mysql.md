@@ -1,24 +1,24 @@
 # MySQL Attribute Properties
 
-* #### `properties` (object)
+** Manifest path: `$.models[*].attributes[*].properties` **
 
-**Manifest path: `$.models[*].attributes[*].properties`**
+This schema is applicable when the model associated with the attribute is linked to a datastore with  `protocol` set 
+as `"mysql"`.
 
-```json
+## Example
+
+```json title="MySQL Attribute properties example"
 {
   "properties": {
-    "columnName": "foo",
+    "columnName": "foo", 
     "columnType": "VARCHAR(30)"
   }
 }
 ```
 
-An attribute corresponds to a column of a MySQL table.
+## Fields
 
-Use this schema when the `datastore` id on the model to which this attribute belongs refers to a datastore that uses the
-`mysql` protocol.
-
-* #### **`columnName` (string) [required]**
+* ### `columnName` (string) [required]
 
     **Manifest path: `$.models[*].attributes[*].properties.columnName`**
 
@@ -27,7 +27,7 @@ Use this schema when the `datastore` id on the model to which this attribute bel
     While creating tables in MySQL for MySQL bound models in the manifest,
     Dore infers the required column name from this field's value.
 
-* #### **`columnType` (string) [required]**
+* ### `columnType` (string) [required]
 
     **Manifest path: `$.models[*].attributes[*].properties.columnType`**
 

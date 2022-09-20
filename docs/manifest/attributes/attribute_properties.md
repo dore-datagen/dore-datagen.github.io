@@ -18,7 +18,3 @@ Since each protocol has different requirements for configuring an attribute,
 this config varies from one protocol to the other. Please refer to the protocol specific sections below for further 
 details.
 
-* [MySQL attribute properties](./attribute_properties_mysql.md)
-* [Postgres attribute properties](./attribute_properties_postgres.md)
-* [MongoDB attribute properties](./attribute_properties_mongodb.md)
-* [Elasticsearch attribute properties](./attribute_properties_elasticsearch.md)

@@ -33,8 +33,12 @@ MySQL for the purposes of this example.
 `models` correspond to tables, its `attributes` correspond to the table's columns, and `datastores` correspond 
 to databases.
 
-An example of Dore Manifest required to generate data for the Ecommerce schema above is shown below. Please refer
-the [Explanation](./example_manifest_explained.md) section provided after the manifest to view details on the contents of the manifest.
+An example of Dore Manifest required to generate data for the Ecommerce schema above is shown below.
+
+For the time being, just copy and paste contents of the manifest shown below into a file in your machine. 
+
+You can refer [Explanation](./example_manifest_explained.md) provided after the manifest to view details on 
+the contents of the manifest.
 
 ```json title="ecommerce-dore-manifest.json" linenums="1"
 {
@@ -128,3 +132,5 @@ the [Explanation](./example_manifest_explained.md) section provided after the ma
   }
 }
 ```
+
+Once we have created the manifest, we can invoke Dore with it: **Next: [Invoke Dore](./example_invoke_dore.md)** 

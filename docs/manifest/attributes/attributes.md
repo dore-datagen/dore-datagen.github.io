@@ -1,66 +1,67 @@
 # Attributes
 
-**Manifest path: `$.models[*].attributes`**
+You can think of an attribute as a **MySQL Column**, an **Elasticsearch Field**, etc.
 
-All attribute definitions for a model go here.
+In a manifest, each model can have multiple attributes defined within it and each attribute is defined as an object 
+with key as the attribute ID and value as the attribute definition.
 
-You can think of an attribute as a *column* in a MySQL table, a *field* of
-an Elasticsearch index, and so on.
+## Example
 
-## Attribute
-
-**Manifest path: `$.models[*].attributes[*]`**
-
-A model can have multiple attributes defined within it. Like datastores and models,  each attribute is defined as an 
-object with key as the attribute's ID and value as the attribute definition.
-
-Similar to datastores and models, an attribute can either be defined in-line in the manifest or in a separate file.
-
-If you are defining the attribute in-line, refer to the [Attribute Definition](#attribute-definition-object) section.
-If you are defining the attribute in a separate file file, refer to the [Attribute Reference](#attribute-reference-object)
-section.
-
-### Attribute Definition (object)
-
-When defining an attribute, we mainly need to provide Dore details about how it should generate `value`(s) for the 
-attribute. In case records generated for the model need to be persisted in a datastore, we also need to specify
-*protocol specific* `properties` for the attribute.
-
-* #### `value` (object) [required]
-
-    **Manifest path: `$.models[*].attributes[*].value`**
-
-    This config is used to specify how Dore should generate values for the attribute.
-
-    Please refer [Attribute Value Generators](value_generators.md) for more details.
-    
-* #### `properties` (object)
-
-	This config is used to specify protocol specifc properties for the attribute.
-
-	Please refer [Attribute Properties](./attribute_properties.md) for more details.
-
-### Attribute Reference (object) 
-
-An attribute can be defined in a file separate from the manifest (or the model) file.
-
-Use the `ref` field in the attribute definition and provde *absolute* path to the file that contains the
-attribute definition.
-
-??? example "Example:: Attribute reference"
-	```json
-	{
-		"an_attribute": {
-			"ref": "/abs/path/to/file.json"
+```json title="Attribute example"
+{
+	"attributes": {
+		"an_attribute": { // (1)
+			"ref": "/abs/path/to/definition.js"
+		},
+		"another_attribute": { // (2)
+			"properties": {
+				"columnName": "another_attribute_column",
+				"columnType": "DATE"
+			},
+			"value": {  // (3)
+				"faker": {
+					"date_between": {
+						"start_date": "2021-01-01",
+						"end_date": "2022-01-01"
+					}
+				}
+			}
 		}
 	}
-	```
+}
+```
 
-	The definition for `an_attribute` is present in a separate file and the 
-	`ref`erence to that file is added in the manifest.
+1. Definition of an Attribute with ID `an_attribute`. View [Attribute Reference](./attribute_reference.md) for details.
+   
+2. Definition of an Attribute with ID `another_attribute`. View [Attribute Definition](./attribute_definition.md) 
+   for details.
+   
+3. **Value** config for Attribute `another_attribute`. View [Attribute Value Generators](./value_generators.md) for 
+   details.
 
-* #### `ref` (string) [required]
+## Fields
 
-	**Manifest Path: `$.models[*].attributes[*].ref`**
+* ### `attributes` (object) [required]
+	
+	**Manifest path: `$.models[*].attributes`**
 
-	*Absolute* path to file that contains the [attribute definition](#attribute-definition-object).
+	This object is a container for all attribute definitions for a model. Each attribute is defined within the
+  	`attributes` object of a model and the keys act as their IDs.
+  
+    Accepted values for keys / Attribute IDs are represented by the following regex:
+
+    **`^[A-Za-z]+[A-Za-z0-9_\-]`**
+
+    i.e, it should start with an alphabetical character and can be followed by any number of alpha-numeric characters, 
+	hyphens, or underscores.
+  
+    #### In-line vs referenced definition
+
+    An attribute can either be defined in-line in the manifest or in a separate file. Although we recommend 
+  	spreading model and datastore definitions across different files, whether to move an attribute 
+  	definition to a different file can be quite subjective. We recommend you take the call based on what seems more 
+  	readable for you. 
+    
+    * [Attribute Definition](./attribute_definition.md) (when defining the attribute in-line)
+    * [Attribute Reference](./attribute_reference.md) (when defining the attribute in a separate file)
+    

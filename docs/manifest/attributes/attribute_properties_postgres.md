@@ -1,10 +1,14 @@
 # Postgres Attribute Properties
 
-* #### `properties` (object)
+** Manifest path: `$.models[*].attributes[*].properties` **
 
-**Manifest path: `$.models[*].attributes[*].properties`**
+This schema is applicable when the model associated with the attribute is linked to a datastore with  `protocol` set 
+as `"postgres"`.
 
-```json
+
+## Example
+
+```json title="Postgres Attribute properties example"
 {
   "properties": {
     "columnName": "foo",
@@ -13,12 +17,9 @@
 }
 ```
 
-An attribute corresponds to a column of a Postgres table.
+## Fields
 
-Use this schema when the `datastore` id on the model to which this attribute belongs refers to a datastore that uses the
-`postgres` protocol.
-
-* #### **`columnName` (string) [required]**
+* ###`columnName` (string) [required]
 
     **Manifest path: `$.models[*].attributes[*].properties.columnName`**
 
@@ -27,7 +28,7 @@ Use this schema when the `datastore` id on the model to which this attribute bel
     While creating tables in Postgres for Postgres bound models in the manifest,
     Dore infers the required column name from this field's value.
 
-* #### **`columnType` (string) [required]**
+* ### `columnType` (string) [required]
 
     **Manifest path: `$.models[*].attributes[*].properties.columnType`**
 

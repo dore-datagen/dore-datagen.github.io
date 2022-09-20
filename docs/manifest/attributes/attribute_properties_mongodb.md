@@ -1,10 +1,13 @@
 # MongoDB Attribute Properties
 
-* #### `properties` (object)
+** Manifest path: `$.models[*].attributes[*].properties` **
 
-**Manifest path: `$.models[*].attributes[*].properties`**
+This schema is applicable when the model associated with the attribute is linked to a datastore with  `protocol` set 
+as `"mongodb"`.
 
-```json
+## Example
+
+```json  title="MongoDB Attribute properties example"
 {
   "properties": {
     "fieldName": "foo"
@@ -12,12 +15,9 @@
 }
 ```
 
-An attribute corresponds to a field of a MongoDB collection.
+## Fields
 
-Use this schema when the `datastore` id on the model to which this attribute belongs refers to a datastore that uses the
-`mongodb` protocol.
-
-* #### **`fieldName` (string) [required]**
+* ### `fieldName` (string) [required]
 
     **Manifest path: `$.models[*].attributes[*].properties.fieldName`**
 

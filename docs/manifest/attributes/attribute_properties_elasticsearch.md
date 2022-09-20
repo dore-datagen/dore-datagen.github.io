@@ -1,10 +1,13 @@
 # Elasticsearch Attribute Properties
 
-* #### `properties` (object)
+** Manifest path: `$.models[*].attributes[*].properties` **
 
-**Manifest path: `$.models[*].attributes[*].properties`**
+This schema is applicable when the model associated with the attribute is linked to a datastore with  `protocol` set 
+as `"elasticsearch7"` or `"elasticsearch8"`.
 
-```json
+## Example
+
+```json title="Elasticsearch Attribute properties example"
 {
   "properties": {
     "fieldName": "foo",
@@ -12,19 +15,14 @@
   }
 }
 ```
-
-An attribute corresponds to a field of an Elasticsearch index.
-
-Use this schema when the `datastore` id on the model to which this attribute belongs refers to a datastore that uses the
-`elasticsearch7` or `elasticsearch8` protocol.
  
-* #### **`fieldName` (string) [required]**
+* ###`fieldName` (string) [required]
 
     **Manifest path: `$.models[*].attributes[*].properties.fieldName`**
 
     Name of the Elasticsearch field that the attribute corresponds to.
 
-* #### **`fieldType` (string) [required]**
+* ###`fieldType` (string) [required]
 
     **Manifest path: `$.models[*].attributes[*].properties.fieldType`**
 

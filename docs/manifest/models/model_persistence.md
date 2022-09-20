@@ -1,20 +1,30 @@
 # Model Persistence
 
+** Manifest path: `$.models[*].persistence`**
+
 The `persistence` of a model determines how a particular model is persisted by Dore.
 
-This is particularly useful when you have nested attributes that need to be represented as a separate model in itself. 
-In such scenarios, you would often want to only generate records for that model and not persist it in the underlying 
-database.
+## Overview
+
+This is particularly useful when you have nested attributes that need to be represented as a separate model in itself 
+but do not need to be persisted -- you would want to only generate records for that model to be reused elsewhere.
 
 Consider the case of a `customer` model which has a `shippingAddress` attribute. We would want to generate addresses 
-for the customer and use those records as values for the `shippingAddress` attribute. Since addresses are complex 
-structures with multiple components, we would perhaps' represent it as a separate model in the manifest so Dore can 
+for the customer and use them as values for the `shippingAddress` attribute. Since addresses are generally complex 
+structures with multiple components, we would represent it as a separate model in the manifest so Dore can 
 generate records for it.
 
-But, we wouldn't want to persist the `address` model itself in the datastore.
-This would be the equivalent of having an `address` table with all addresses as
-rows in the table. We just want to use the model so that its records can be used 
+<figure markdown>
+  ![Manifest Mind Map](../../assets/dore-nested-docs.svg)
+  <figcaption>Fig: Schema with nested attribute</figcaption>
+</figure>
+
+But, we wouldn't want to persist the `address` model itself in the datastore. This would be the equivalent of having an 
+`address` table with all addresses as rows in the table. We just want to use the model so that its records can be used 
 for values in other attributes.
+
+
+## Allowed values
 
 The Persistence levels supported by Dore along with its implications are given below:
 

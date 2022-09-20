@@ -3,11 +3,14 @@
 The E-Commerce manifest is shown here again for reference. Please scroll past the code snippet below
 to view details of fields about the manifest. 
 
+![E-Commerce schema](./assets/dore-example-usage.svg)
+
+
 ```json title="ecommerce-dore-manifest.json" linenums="1"
 {
   "id": "ecommerce-dore-manifest",   
-  "datastores": {
-    "ecommerce": {
+  "datastores": {  // (1)
+    "ecommerce": {  // (2)
       "protocol": "mysql",
       "properties": { 
         "database": "Ecommerce",
@@ -18,16 +21,16 @@ to view details of fields about the manifest.
       }
     }
   },
-  "models": {
-    "customer": {
-      "records": 100,
-      "datastore": "ecommerce",
-      "properties": {
+  "models": { // (3)
+    "customer": {  // (4)
+      "records": 100,  // (5)
+      "datastore": "ecommerce",  //(6)
+      "properties": {  // (7)
         "tableName": "Customer"
       },
-      "attributes": {
-        "customerId": {
-          "properties": {
+      "attributes": {  // (8)
+        "customerId": {  // (9)
+          "properties": {  // (10)
             "columnName": "customer_id",
             "columnType": "CHAR(50)"
           },
@@ -95,6 +98,77 @@ to view details of fields about the manifest.
   }
 }
 ```
+
+1. **`$.datastores`**<br>
+   **Datastores** correspond to databases. All datastores are defined within the `datastores` root object in the manifest
+   and each datastore is defined with a key which acts as the datastore ID and can be used to refer to the datastore in 
+   other parts of the manifest. <br><br>
+   Please refer
+   <a href="../manifest/datastores/datastores/" target="_blank">
+   Datastores
+   </a>
+   for more details.
+   
+2. **`$.datastores.ecommerce`**<br>
+   **E-Commerce database definition**<br>
+   The `ecommerce` datastore definition. This object contains details for the E-commerce database. <br><br>
+   Please refer
+   <a href="" target="_blank">
+   MySQL datastore
+   </a>
+   for more details.
+   
+3. **`$.models`**<br>
+   **Models** correspond to tables. All models are defined within the `models` root
+   object in the manifest. Each model is defined with with a key which acts as the model ID and value as the model 
+   definition. <br>
+   Based on the Ecommerce schema diagram, we need to define two models corresponding to the two tables in the schema 
+    -- one for `Customer` and the other for `Order`. <br><br>
+   Please refer
+   <a href="../manifest/models/models" target="_blank">
+   Models
+   </a>
+   for more details.
+   
+4. **`$.models.customer`**<br>
+   **Customer model definition**<br>
+   We define a model in the manifest which corresponds to the `Customer` table in the schema diagram.
+   
+5. **`$.models.customer.records`**<br>
+   This specifies how many records should Dore generate for the model.
+   
+6. **`$.models.customer.datastore`**<br>
+   The `datastore` field on a model tells Dore which datastore the model is associated with. <br>
+   Based on the schema, both models are associated with the `Ecommerce` database (which is defined 
+   in `$.datastores.ecommerce` in this manifest). Thus, we associate the `customer` model with the `ecommerce` 
+   datastore.
+   
+7. **`$.models.customer.properties`**<br>
+    MySQL specific properties for the model. <br>
+    Please refer [MySQL model properties] for further details.
+   
+8. **`$.models.customer.attributes`**<br>
+    Each model will generally have a set of attributes associated with it. You can think of an attribute as a
+    *column* of a MySQL table where the model corresponds to the table. 
+   
+    A model's attributes are defined within the `attributes` field of the model. 
+   
+    Like datastores and models, each attribute is defined with a key which acts as the attribute ID and value as the
+    attribute definition.
+    
+   
+9. **`$.models.customer.attributes.customerId`**
+
+    Details regarding the `Customer.customer_id` column.
+
+    Please refer [Attributes] for further details.
+
+10. **`$.models.customer.attributes.customerId.properties`**
+
+    **Attribute Properties**
+
+    Protocol
+    
 
 Explanations for the Manifest JSON above is provided below. Please click on the sections to view details of the
 fields and refer to the manifest above to see how the details tie back to the manifest file.
