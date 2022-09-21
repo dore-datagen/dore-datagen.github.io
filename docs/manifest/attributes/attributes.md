@@ -18,7 +18,7 @@ with key as the attribute ID and value as the attribute definition.
 				"columnName": "another_attribute_column",
 				"columnType": "DATE"
 			},
-			"value": {  // (3)
+			"value": {
 				"faker": {
 					"date_between": {
 						"start_date": "2021-01-01",
@@ -35,9 +35,6 @@ with key as the attribute ID and value as the attribute definition.
    
 2. Definition of an Attribute with ID `another_attribute`. View [Attribute Definition](./attribute_definition.md) 
    for details.
-   
-3. **Value** config for Attribute `another_attribute`. View [Attribute Value Generators](./value_generators.md) for 
-   details.
 
 ## Fields
 

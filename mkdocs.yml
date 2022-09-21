@@ -40,13 +40,14 @@ nav:
     - Getting started:
         - Installation: 'index.md'
         - Example:
-          - E-commerce example: 'example.md'
-          - Create your manifest: 'example_create_your_manifest.md'
-          - Invoke Dore: 'example_invoke_dore.md'
-          - E-commerce manifest explained: 'example_manifest_explained.md'
-    - Tutorial: 'tutorial.md'
+          - "The E-commerce schema": 'example.md'
+          - "Create your manifest": 'example_create_your_manifest.md'
+          - "Invoke Dore": 'example_invoke_dore.md'
+          - "E-commerce manifest explained": 'example_manifest_explained.md'
 
   - Documentation:
+      - CLI:
+          - CLI Reference: 'cli/cli_reference.md'
       - Manifest:
           - Manifest: 'manifest/manifest.md'
           - Datastores:

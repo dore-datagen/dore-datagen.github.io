@@ -6,6 +6,10 @@ Once the manifest is defined, we invoke Dore with it.
 foo@bar:(dore-venv)$ dore --manifest /abs/path/to/ecommerce-dore-manifest.json
 ```
 
+??? note "`dore` command usage"
+
+    Please refer [CLI Reference](./cli/cli_reference.md) to view details on usage of the `dore` command
+
 That's it!
 
 You should be able to see logs that look something like this:
