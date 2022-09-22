@@ -46,23 +46,19 @@ Install the `dore` package with [pip](https://pypi.org/project/dore/).
 foo@bar:(dore-venv)$ pip install dore
 ```
 
-## Next Steps
-
-Once the installation is complete, and if this is the first time you're trying out Dore, we recommend you check out our
-[E-Commerce example](./example.md) to get hands on with Dore.
-
-## Documentation
-
-### Usage
+## Usage
 
 ```shell
 $ dore --manifest MANIFEST_FILE [OPTIONS]
 ```
 
-Please refer [CLI Reference](./cli/cli_reference.md) to view details on usage of the `dore` command.
+### Documentation Links
 
-### Manifest
+* [CLI Reference](./cli/cli_reference.md): to view details on usage of `dore` command.
 
-Please refer [Manifest Reference](./manifest/manifest.md) to view documentation on Dore Manifest.
+* [Manifest Reference](./manifest/manifest.md): to view documentation on Dore Manifest.
 
+## Next Steps
 
+Once the installation is complete, and if this is the first time you're trying out Dore, we recommend you check out our
+[E-Commerce example](./example.md) to get hands on with Dore.
