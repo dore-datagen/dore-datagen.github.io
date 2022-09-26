@@ -29,10 +29,10 @@ which tells Dore how these entities are or should be represented/persisted in th
 
 * ### `id` (string) [required]
 
-  **Manifest path: `$.id`**
-
-  Each manifest should specify an `id` string to identify the manifest. Although Dore doesn't use this ID, it has been
-  kept as a required field as it helps in improving the readability of the manifest.
+    **Manifest path: `$.id`**
+  
+    Each manifest should specify an `id` string to identify the manifest. Although Dore doesn't use this ID, it has been
+    kept as a required field as it helps in improving the readability of the manifest.
 
 * ### `datastores` (object) [required]
   
