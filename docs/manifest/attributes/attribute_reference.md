@@ -1,6 +1,6 @@
 # Attribute Reference
 
-**Manifest path: `$.models[*].attributes[*]`
+**Manifest path: `$.models[*].attributes[*]`**
 
 An attribute can be defined in a file separate from the manifest (or the model) file.
 

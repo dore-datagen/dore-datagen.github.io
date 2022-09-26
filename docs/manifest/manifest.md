@@ -27,7 +27,14 @@ which tells Dore how these entities are or should be represented/persisted in th
 
 ## Fields
 
-* ### `datastores`
+* ### `id` (string) [required]
+
+  **Manifest path: `$.id`**
+
+  Each manifest should specify an `id` string to identify the manifest. Although Dore doesn't use this ID, it has been
+  kept as a required field as it helps in improving the readability of the manifest.
+
+* ### `datastores` (object) [required]
   
     **Manifest path: `$.datastores`**
     
@@ -38,7 +45,7 @@ which tells Dore how these entities are or should be represented/persisted in th
     Please refer [Datastores](./datastores/datastores.md) for further details.
 
 
-* ### `models`
+* ### `models` (object) [required]
   
     **Manifest path: `$.models`**
 
@@ -47,15 +54,3 @@ which tells Dore how these entities are or should be represented/persisted in th
     A single dore manifest can have multiple models definitions.
     
     Please refer [Models](./models/models.md) for further details.
-
-
-* ### `attributes`
-  
-    **Manifest path: `$.models[*].attributes`**
-    
-    Each model typically has a set of attributes associated with it. 
-    
-    You can think of an attribute as a *column* of a MySQL table.
-    
-    Please refer [Attributes](./attributes/attributes.md) for further details.
-
