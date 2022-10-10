@@ -1,3 +1,9 @@
+---
+hide:
+  - footer
+---
+
+
 ```text
 
 8 888888888o.           ,o888888o.      8 888888888o.    8 888888888888
@@ -15,35 +21,27 @@
                    SCHEMA BASED FAKE DATA GENERATOR
 ```
 
+<br>
 
-# Welcome to Dore's documentation!
+# Getting Started
 
-## Getting Started
+**Dore** is a tool that can generate fake data for you for schemas with complex dependencies; such as schemas with 
+hierarchical relations, PK/FK relations, nested values, and so on. All you need to do is provide a single input 
+which is a specification of the target data requirements and Dore generates the required databases, tables, and data 
+for those tables for you. 
 
-*Dore* is a tool that generates fake data for you based on a config (known as the **manifest**). 
-It can generate data for schemas with complex dependencies such as hierarchical schemas, schemas with PK/FK relations, 
-nested values, and so on.
+This input is known as the [**Manifest**](manifest/manifest/). Once the manifest is created, it can be shared with 
+others in order to help them generate the same data as well!
 
-Dore leverages other fake data generation libraries (ex: Faker) and generates fake data for complex schemas with 
-dependencies amongst them. While Faker allows you to do something like *generate a random UUID4 string*, with Dore, 
-you could do something along the lines of *Generate a random UUID4 string as PK for a table and use these values as a FK in another 
-table*.
-
-You can use Dore for local development as well as in CI/CD pipelines.
+Dore leverages fake data generation libraries (ex: Faker), which allow you to generate fake values for certain data 
+types, and generates fake data for entire schemas.
 
 ## Installation
-
-*Optional*: Create/Use a virtual env with python [venv](https://docs.python.org/3/library/venv.html) before installing
-anything.
-
-```console
-foo@bar:$ python3 -m venv dore-venv && source dore-venv/bin/activate
-```
 
 Install the `dore` package with [pip](https://pypi.org/project/dore/).
 
 ```console
-foo@bar:(dore-venv)$ pip install dore
+$ pip install dore
 ```
 
 ## Usage
@@ -52,13 +50,14 @@ foo@bar:(dore-venv)$ pip install dore
 $ dore --manifest MANIFEST_FILE [OPTIONS]
 ```
 
-### Documentation Links
+## Next Steps
+
+Once the installation is complete, and if this is the first time you're trying out Dore, we recommend you check out our
+[**Tutorial**](/tutorial/overview/) to learn how to use it.
+
+
+## Documentation
 
 * [CLI Reference](./cli/cli_reference.md): to view details on usage of `dore` command.
 
 * [Manifest Reference](./manifest/manifest.md): to view documentation on Dore Manifest.
-
-## Next Steps
-
-Once the installation is complete, and if this is the first time you're trying out Dore, we recommend you check out our
-[E-Commerce example](./example.md) to get hands on with Dore.
