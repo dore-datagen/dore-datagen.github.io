@@ -6,6 +6,7 @@ site_description: >-
 
 repo_name: dore-datagen/dore-py
 repo_url: https://github.com/dore-datagen/dore-py
+edit_uri: https://github.com/dore-datagen/dore-datagen.github.io/tree/master/docs
 
 # Copyright
 copyright: Copyright &copy; 2022 Bhargav KN
@@ -13,6 +14,8 @@ copyright: Copyright &copy; 2022 Bhargav KN
 theme:
   logo: assets/dore-logo.svg
   name: material
+  icon:
+    repo: fontawesome/brands/github
   palette:
 
     # Palette toggle for light mode
@@ -37,15 +40,28 @@ theme:
 
 nav:
   - Home:
-    - Getting started:
-        - Installation: 'index.md'
-        - Example:
-          - "The E-commerce schema": 'example.md'
-          - "Create your manifest": 'example_create_your_manifest.md'
-          - "Invoke Dore": 'example_invoke_dore.md'
-          - "E-commerce manifest explained": 'example_manifest_explained.md'
+      - Getting Started: 'index.md'
 
-  - Documentation:
+  - Tutorial:
+      - Overview: 'tutorial/overview.md'
+      - The E-Commerce schema: 'tutorial/ecommerce_schema.md'
+      - Dore Manifest:
+        - Dore Manifest: 'tutorial/dore_manifest.md'
+        - Creating the Manifest: 'tutorial/create_manifest.md'
+        - Datastore: 'tutorial/ecommerce_datastore.md'
+        - Models and Attributes: 'tutorial/models_and_attributes.md'
+        - Attribute Value Definition: 'tutorial/attribute_value_definition.md'
+        - Model and Attribute Properties: 'tutorial/model_and_attribute_properties.md'
+        - Manifest Review: 'tutorial/ecommerce_manifest_review.md'
+      - Invoking Dore:
+        - Invoke Dore: 'tutorial/invoke_dore.md'
+        - Manifest Variables: 'tutorial/manifest_variables.md'
+        - Handling Model Conflicts: 'tutorial/handling_model_conflicts.md'
+        - Multi-File Manifest: 'tutorial/multifile_manifest.md'
+      - That's all Folks!:
+          - Conclusion: 'tutorial/conclusion.md'
+
+  - Reference:
       - CLI:
           - CLI Reference: 'cli/cli_reference.md'
       - Manifest:
@@ -86,7 +102,7 @@ nav:
                 - Postgres: 'manifest/attributes/attribute_properties_postgres.md'
                 - MongoDB: 'manifest/attributes/attribute_properties_mongodb.md'
                 - Elasticsearch: 'manifest/attributes/attribute_properties_elasticsearch.md'
-  - About: 'about.md'
+  - About: 'about/about.md'
 
 markdown_extensions:
   - pymdownx.highlight:

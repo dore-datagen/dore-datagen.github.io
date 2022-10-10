@@ -1,53 +1,20 @@
-# Create Manifest
+# Protocol specific properties for Models and Attributes
 
-Manifests have the following structure:
+Similar to how Datastores need to have *protocol specific properties* defined in the manifest so Dore can connect
+and interact with the underlying system, Models and Attributes need to have *protocol specific properties*, such as
+table names for models, column names and their data types for attributes, defined in the manifest so Dore can
+interact with the entities in the underlying system.
 
-```json title="General structure of a Dore manifest" linenums="1"
+Let's add these properties to the Models and Attributes we created in the previous section as shown below:
+
+```json linenums="1" title="dore-ecommerce-manifest.json" hl_lines="19 20 21 24 25 26 27 35 36 37 38 50 51 52 55 56 57 58 66 67 68 69 75 76 77 78"
 {
-  "id": "manifest ID",
-  "datastores": {
-    // ... datastore definitions ...
-  },  
-  "models": {
-    "a_model": {
-      "attributes": {
-        // ... attribute definitions ...
-      }
-    },
-    
-    // ... other model definitions ...
-  }
-}
-```
-
-Take a moment to look at the fields mentioned in the manifest above.
-You would notice three main things:
-
-* `datastores` (line 3)
-* `models` (line 6)
-  * `attributes` (line 8)
-
-Although Dore supports generating and persisting data for multiple protocols, we shall keep our vocabulary specific to
-MySQL for the purposes of this example. 
-
-`models` correspond to tables, its `attributes` correspond to the table's columns, and `datastores` correspond 
-to databases.
-
-An example of Dore Manifest required to generate data for the Ecommerce schema above is shown below.
-
-For the time being, just copy and paste contents of the manifest shown below into a file in your machine. 
-
-You can refer [Explanation](./example_manifest_explained.md) provided after the manifest to view details on 
-the contents of the manifest.
-
-```json title="ecommerce-dore-manifest.json" linenums="1"
-{
-  "id": "ecommerce-dore-manifest",   
+  "id": "ecommerce-example",
   "datastores": {
     "ecommerce": {
       "protocol": "mysql",
-      "properties": { 
-        "database": "Ecommerce",
+      "properties": {
+        "database": "Dore_Ecommerce",
         "host": "127.0.0.1",
         "port": "3306",
         "user": "root",
@@ -57,8 +24,8 @@ the contents of the manifest.
   },
   "models": {
     "customer": {
-      "records": 100,
       "datastore": "ecommerce",
+      "records": 10,
       "properties": {
         "tableName": "Customer"
       },
@@ -88,8 +55,8 @@ the contents of the manifest.
       }
     },
     "order": {
-      "records": 1000,
       "datastore": "ecommerce",
+      "records": 100,
       "properties": {
         "tableName": "Order"
       },
@@ -107,7 +74,7 @@ the contents of the manifest.
         },
         "customerId": {
           "properties": {
-            "columnName": "customer",
+            "columnName": "customer_id",
             "columnType": "CHAR(50)"
           },
           "value": {
@@ -117,13 +84,13 @@ the contents of the manifest.
         "orderDate": {
           "properties": {
             "columnName": "order_date",
-            "columnType": "date"
+            "columnType": "DATE"
           },
           "value": {
             "faker": {
               "date_between": {
                 "start_date": "-1y"
-              }
+              }            
             }
           }
         }
@@ -133,4 +100,11 @@ the contents of the manifest.
 }
 ```
 
-Once we have created the manifest, we can invoke Dore with it: **Next: [Invoke Dore](./example_invoke_dore.md)** 
+With these additions, we have completed the ecommerce manifest.
+
+<br>
+<hr>
+
+[ ➡ Next: Manifest Review](/tutorial/ecommerce_manifest_review/){.md-button}
+
+<hr>
