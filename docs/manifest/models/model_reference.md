@@ -9,11 +9,11 @@ Use the `ref` field in the model definition and provide *absolute* path to the f
 
 ## Example
 
-```json title="Model reference example"
+```json title="Model Reference example" linenums="1"
 {
-	"a_model": {
-		"ref": "/abs/path/to/file.json"
-	}
+  "a_model": {
+    "ref": "/abs/path/to/file.json"
+  }
 }
 ```
 

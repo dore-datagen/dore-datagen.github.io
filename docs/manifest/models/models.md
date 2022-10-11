@@ -7,7 +7,7 @@ ID and value as the model definition.
 
 ## Example
 
-```json title="Model example"
+```json title="Models example" linenums="1"
 {
   "models": {
     "a_model": { // (1)

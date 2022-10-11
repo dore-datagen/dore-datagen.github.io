@@ -70,38 +70,29 @@ nav:
             - Datastores: 'manifest/datastores/datastores.md'
             - Datastore Reference: 'manifest/datastores/datastore_reference.md'
             - Datastore Definition: 'manifest/datastores/datastore_definition.md'
-            - Datastore Properties:
-                - MySQL: 'manifest/datastores/datastore_properties_mysql.md'
-                - Postgres: 'manifest/datastores/datastore_properties_postgres.md'
-                - MongoDB: 'manifest/datastores/datastore_properties_mongodb.md'
-                - Elasticsearch: 'manifest/datastores/datastore_properties_elasticsearch.md'
           - Models:
             - Models: 'manifest/models/models.md'
             - Model Definition: 'manifest/models/model_definition.md'
             - Model Reference: 'manifest/models/model_reference.md'
             - Model Persistence: 'manifest/models/model_persistence.md'
-            - Model Properties:
-              - MySQL: 'manifest/models/model_properties_mysql.md'
-              - Postgres: 'manifest/models/model_properties_postgres.md'
-              - MongoDB: 'manifest/models/model_properties_mongodb.md'
-              - Elasticsearch: 'manifest/models/model_properties_elasticsearch.md'
           - Attributes:
             - Attributes: 'manifest/attributes/attributes.md'
             - Attribute Reference: 'manifest/attributes/attribute_reference.md'
             - Attribute Definition: 'manifest/attributes/attribute_definition.md'
-            - Value Generators:
-                - Faker: 'manifest/attributes/value_generator_faker.md'
-                - Selector:
-                  - Selector: 'manifest/attributes/value_generator_selector.md'
-                  - Random Selector: 'manifest/attributes/value_generator_selector_random.md'
-                  - Round Robin Selector: 'manifest/attributes/value_generator_selector_round_robin.md'
-                - Ref: 'manifest/attributes/value_generator_ref.md'
-                - Composite: 'manifest/attributes/value_generator_composite.md'
-            - Attribute Properties:
-                - MySQL: 'manifest/attributes/attribute_properties_mysql.md'
-                - Postgres: 'manifest/attributes/attribute_properties_postgres.md'
-                - MongoDB: 'manifest/attributes/attribute_properties_mongodb.md'
-                - Elasticsearch: 'manifest/attributes/attribute_properties_elasticsearch.md'
+      - Protocols:
+          - MySQL: 'protocols/mysql.md'
+          - PostgreSQL: 'protocols/postgresql.md'
+          - MongoDB: 'protocols/mongodb.md'
+          - Elasticsearch: 'protocols/elasticsearch.md'
+      - Attribute Value Generators:
+          - Faker: 'attribute_value_generators/faker.md'
+          - Selectors:
+              - Selector: 'attribute_value_generators/selector.md'
+              - Random Selector: 'attribute_value_generators/random_selector.md'
+              - Round Robin Selector: 'attribute_value_generators/round_robin_selector.md'
+          - Ref: 'attribute_value_generators/ref.md'
+          - Composite: 'attribute_value_generators/composite.md'
+
   - About: 'about/about.md'
 
 markdown_extensions:

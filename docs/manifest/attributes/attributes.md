@@ -7,27 +7,27 @@ with key as the attribute ID and value as the attribute definition.
 
 ## Example
 
-```json title="Attribute example"
+```json title="Attributes example" linenums="1"
 {
-	"attributes": {
-		"an_attribute": { // (1)
-			"ref": "/abs/path/to/definition.js"
-		},
-		"another_attribute": { // (2)
-			"properties": {
-				"columnName": "another_attribute_column",
-				"columnType": "DATE"
-			},
-			"value": {
-				"faker": {
-					"date_between": {
-						"start_date": "2021-01-01",
-						"end_date": "2022-01-01"
-					}
-				}
-			}
-		}
-	}
+  "attributes": {
+    "an_attribute": { // (1)
+      "ref": "/abs/path/to/definition.js"
+    },
+    "another_attribute": { // (2)
+      "properties": {
+        "columnName": "another_attribute_column",
+        "columnType": "DATE"
+      },
+      "value": {
+        "faker": {
+          "date_between": {
+            "start_date": "2021-01-01",
+            "end_date": "2022-01-01"
+          }
+        }
+      }
+    }
+  }
 }
 ```
 

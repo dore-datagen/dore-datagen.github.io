@@ -6,7 +6,7 @@ Select values in a round-robin manner for the attribute from a list of values.
 
 ## Example
 
-```json title="Round Robin selector example"
+```json title="Round Robin selector example" linenums="1"
 {
   "selector": {
     "roundRobin": {

@@ -8,23 +8,23 @@ datastore's ID and value as the datastore definition.
 ## Example
 
 
-```json title="Datastores example"
+```json title="Datastores example" linenums="1"
 {
-	"datastores": {
-		"a_datastore": { // (1)
-			"ref": "/abs/path/to/definition.js"
-		},
-		"another_datastore": { // (2)
-			"protocol": "mysql",
-			"properties": {
-				"host": "127.0.0.1",
-				"port": "3306",
-				"user": "john_doe",
-				"password": "yourpassword",
-				"database": "foobar"
-			}
-		}
-	}
+  "datastores": {
+    "a_datastore": { // (1)
+      "ref": "/abs/path/to/definition.js"
+    },
+    "another_datastore": { // (2)
+      "protocol": "mysql",
+      "properties": {
+        "host": "127.0.0.1",
+        "port": "3306",
+        "user": "john_doe",
+        "password": "yourpassword",
+        "database": "foobar"
+      }
+    }
+  }
 }
 ```
 

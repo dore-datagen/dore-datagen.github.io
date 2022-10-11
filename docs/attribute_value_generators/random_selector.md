@@ -6,7 +6,7 @@ Select values at random for the attribute from a list of values.
 
 ## Example
 
-```json title="Random selector example"
+```json title="Random selector example" linenums="1"
 {
   "selector": {
     "random": {

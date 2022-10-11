@@ -9,17 +9,17 @@ A model definition needs to specify details about `attributes` of the model, *pr
 
 ## Example
 
-```json title="Model Definition example"
+```json title="Model Definition example" linenums="1"
 {
-    "records": 100,
-    "persistence": "FULL"
-    "datastore": "a_datastore",
-    "properties": {
-        "tableName": "anoter_model_tbl"
-    },
-    "attributes": {
-        // attribute definitions //
-    }
+  "records": 100,
+  "persistence": "FULL",
+  "datastore": "a_datastore",
+  "properties": {
+      "tableName": "anoter_model_tbl"
+  },
+  "attributes": {
+      // attribute definitions //
+  }
 }
 ```
 
@@ -77,8 +77,8 @@ A model definition needs to specify details about `attributes` of the model, *pr
     Since each protocol has different requirements for configuring a model, this config varies from one protocol to the 
     other. Please refer the protocol specific sections below for details:
   
-    * [MySQL Model properties](./model_properties_mysql.md)
-    * [Postgres Model properties](./model_properties_postgres.md)
-    * [MongoDB Model properties](./model_properties_mongodb.md)
-    * [Elasticsearch Model properties](./model_properties_elasticsearch.md)
+    * [MySQL Model properties](/protocols/mysql/#model-properties)
+    * [Postgres Model properties](/protocols/postgresql/#model-properties)
+    * [MongoDB Model properties](/protocols/mongodb/#model-properties)
+    * [Elasticsearch Model properties](/protocols/elasticsearch/#model-properties)
     
