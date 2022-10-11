@@ -53,7 +53,13 @@ $ dore --manifest MANIFEST_FILE [OPTIONS]
 ## Next Steps
 
 Once the installation is complete, and if this is the first time you're trying out Dore, we recommend you check out our
-[**Tutorial**](/tutorial/overview/) to learn how to use it.
+[**Tutorial**](/tutorial/overview/) which walks you through using Dore to generate fake data for the ecommerce schema 
+shown below:
+
+<figure markdown>
+  ![Image title](assets/ecommerce-schema.svg)
+  <figcaption>Ecommerce schema</figcaption>
+</figure>
 
 
 ## Documentation

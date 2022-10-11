@@ -16,9 +16,13 @@ dependent on it are generated before generating records for the dependent models
 
 ## Example
 
-You can consider the [E-Commerce example](../../example.md) to understand this better.
+You can consider the E-Commerce schema to understand this better.
 
-![Ecommerce Example](../../assets/dore-example-usage.svg)
+<figure markdown>
+  ![Image title](../../assets/ecommerce-schema.svg)
+  <figcaption>Ecommerce schema</figcaption>
+</figure>
+
 
 In order to generate data for this schema with Dore, we can specify the value config for `customer_id` in the 
 `Ecommerce.Order` model as a `ref` value and provide a reference to the dependent attribute and model, which is the 
