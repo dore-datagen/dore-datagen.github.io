@@ -9,26 +9,23 @@ An attribute definition needs to specify details about how Dore should generate 
 
 ## Example
 
-```json title="Attribute Definition example"
-
+```json title="Attribute Definition example" linenums="1"
 {
-    "another_attribute": {
-        "properties": {
-            "columnName": "another_attribute_column",
-            "columnType": "DATE"
-        },
-        "value": {
-            "faker": {
-                "date_between": {
-                    "start_date": "2021-01-01",
-                    "end_date": "2022-01-01"
-                }
-            }
+  "another_attribute": {
+    "properties": {
+      "columnName": "another_attribute_column",
+      "columnType": "DATE"
+    },
+    "value": {
+      "faker": {
+        "date_between": {
+          "start_date": "2021-01-01",
+          "end_date": "2022-01-01"
         }
+      }
     }
+  }
 }
-
-
 ```
 
 ## Fields
@@ -44,10 +41,10 @@ An attribute definition needs to specify details about how Dore should generate 
   
     Please refer the value generators below for details:
 
-    * [Faker](./value_generator_faker.md)
-    * [Selector](./value_generator_selector.md)
-    * [Ref](./value_generator_ref.md)
-    * [Composite](./value_generator_composite.md)
+    * [Faker](/attribute_value_generators/faker/)
+    * [Selector](/attribute_value_generators/selector/)
+    * [Ref](/attribute_value_generators/ref/)
+    * [Composite](/attribute_value_generators/composite/)
 
 * ### `properties` (object)
 
@@ -63,8 +60,8 @@ An attribute definition needs to specify details about how Dore should generate 
     Since each protocol has different requirements for configuring an attribute, this config varies from one protocol to 
     the other. Please refer the protocol specific sections below for details:
   
-    * [MySQL Attribute properties](./attribute_properties_mysql.md)
-    * [Postgres Attribute properties](./attribute_properties_postgres.md)
-    * [MongoDB Attribute properties](./attribute_properties_mongodb.md)
-    * [Elasticsearch Attribute properties](./attribute_properties_elasticsearch.md)
+    * [MySQL Attribute properties](/attribute_value_generators/faker/)
+    * [Postgres Attribute properties](/protocols/postgresql/#attribute-properties)
+    * [MongoDB Attribute properties](/protocols/mongodb/#attribute-properties)
+    * [Elasticsearch Attribute properties](/protocols/elasticsearch/#attribute-properties)
     

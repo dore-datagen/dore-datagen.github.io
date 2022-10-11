@@ -9,11 +9,11 @@ Use the `ref` field in the attribute definition and provde *absolute* path to th
 
 ## Example
 
-```json
+```json linenums="1" title="Attribute Reference example"
 {
-	"an_attribute": {
-		"ref": "/abs/path/to/file.json"
-	}
+  "an_attribute": {
+    "ref": "/abs/path/to/file.json"
+  }
 }
 ```
 

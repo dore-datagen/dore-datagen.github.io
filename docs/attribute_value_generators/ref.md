@@ -19,7 +19,7 @@ dependent on it are generated before generating records for the dependent models
 You can consider the E-Commerce schema to understand this better.
 
 <figure markdown>
-  ![Image title](../../assets/ecommerce-schema.svg)
+  ![Image title](../assets/ecommerce-schema.svg)
   <figcaption>Ecommerce schema</figcaption>
 </figure>
 

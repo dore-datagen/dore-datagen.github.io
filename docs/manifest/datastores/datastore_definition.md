@@ -9,15 +9,15 @@ specific `properties`* of the datastore which Dore uses to interact with the und
 
 ## Example
 
-```json title="Datastore Definition example"
+```json title="Datastore Definition example" linenums="1"
 {
-	"protocol": "mysql",
-	"properties": {
-		"host": "127.0.0.1",
-		"port": "3306",
-		"user": "john_doe",
-		"password": "yourpassword",
-		"database": "foobar"
+  "protocol": "mysql",
+  "properties": {
+    "host": "127.0.0.1",
+    "port": "3306",
+    "user": "john_doe",
+    "password": "yourpassword",
+    "database": "foobar"
 	}
 }
 ```
@@ -47,8 +47,8 @@ specific `properties`* of the datastore which Dore uses to interact with the und
 	Each protocol has a different way of implementing the datastore abstraction. Please refer to the
 	protocol specific sections below for details:
   
-	* [MySQL Datastore properties](./datastore_properties_mysql.md)
-	* [Postgres Datastore properties](./datastore_properties_postgres.md)
-	* [MongoDB Datastore properties](./datastore_properties_mongodb.md)
-	* [Elasticsearch Datastore properties](./datastore_properties_elasticsearch.md)
+	* [MySQL Datastore properties](/protocols/mysql/#datastore-properties)
+	* [Postgres Datastore properties](/protocols/postgresql/#datastore-properties)
+	* [MongoDB Datastore properties](/protocols/mongodb/#datastore-properties)
+	* [Elasticsearch Datastore properties](/protocols/elasticsearch/#datastore-properties)
 	

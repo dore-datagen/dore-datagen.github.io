@@ -9,11 +9,11 @@ Use the `ref` field in the datastore definition and provide *absolute* path to t
 
 ## Example
 
-```json title="Datastore reference example"
+```json title="Datastore Reference example" linenums="1"
 {
-	"a_datastore": {
-		"ref": "/abs/path/to/file.json"
-	}
+  "a_datastore": {
+    "ref": "/abs/path/to/file.json"
+  }
 }
 ```
 

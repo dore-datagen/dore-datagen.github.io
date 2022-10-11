@@ -12,7 +12,7 @@ in a round robin fashion for each record, you can use the *Round Robin Selector*
 
 ## Example
 
-```json title="Selector example"
+```json title="Selector example" linenums="1"
 {
   "selector": {
     "random": {
@@ -39,5 +39,5 @@ in a round robin fashion for each record, you can use the *Round Robin Selector*
     Dore supports the following selector types. Please visit the selector specific documentation to view details on how 
     to use a particular selector.
 
-    * [Random Selector](./value_generator_selector_random.md)
-    * [Round Robin Selector](./value_generator_selector_round_robin.md)
+    * [Random Selector](/attribute_value_generators/random_selector/)
+    * [Round Robin Selector](/attribute_value_generators/round_robin_selector/)

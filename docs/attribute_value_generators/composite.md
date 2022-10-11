@@ -13,14 +13,14 @@ value of an attribute to be an *entire record* of the dependent model.
 Consider the following schema where you want to generate records for a `customer` collection in MongoDB
 
 <figure markdown>
-  ![Manifest Mind Map](../../assets/dore-nested-docs.svg)
+  ![Manifest Mind Map](../assets/dore-nested-docs.svg)
   <figcaption>Fig: Schema with nested attribute</figcaption>
 </figure>
 
 The first model / collection `customer` has a `shippingAddress` field whose values are nested objects of the 
 `address` model. That is, the documents in `customer` collection would look something like the one shown below:
 
-```json title="Dcouments in customer collection"
+```json title="Dcouments in customer collection" linenums="1"
 {
   "customer_id": 1,
   "shippingAddress": {
