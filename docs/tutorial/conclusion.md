@@ -25,8 +25,8 @@ easier.
 We recommend checking out our documentation to get detailed information about the various manifest fields as well as 
 usage of the Dore command in order to use Dore for your own use cases.
 
-* [CLI Reference](./cli/cli_reference.md): to view details on usage of `dore` command.
+* [CLI Reference](../cli/cli_reference.md): to view details on usage of `dore` command.
 
-* [Manifest Reference](./manifest/manifest.md): to view documentation on Dore Manifest.
+* [Manifest Reference](../manifest/manifest.md): to view documentation on Dore Manifest.
 
 
