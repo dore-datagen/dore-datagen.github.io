@@ -18,7 +18,7 @@ hide:
 8 888888888P'           `8888888P'      8 8888     `88.  8 888888888888
 
 
-                   SCHEMA BASED FAKE DATA GENERATOR
+                       SYNTHETIC DATA GENERATOR                            
 ```
 
 <br>
